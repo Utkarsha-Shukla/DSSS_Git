@@ -48,6 +48,7 @@ def math_quiz():
         useranswer = int(useranswer)
         # Condition to check if the user answer is correct, as calculated by the program
 
+        # Exception handling for checking if values entered are integers
         if not type(useranswer) is int:   
             raise TypeError("Only integers allowed")
         else:
