@@ -42,8 +42,8 @@ def math_quiz():
         number_2= choose_integer(1, 5)
         operator = choose_operator()
 
-        PROBLEM, ANSWER =calculation(number_1, number_2, operator)
-        print(f"\nQuestion: {PROBLEM}")
+        problem, answer =calculation(number_1, number_2, operator)
+        print(f"\nQuestion: {problem}")
         useranswer = input("Your answer: ")
         useranswer = int(useranswer)
         # Condition to check if the user answer is correct, as calculated by the program
@@ -52,11 +52,11 @@ def math_quiz():
         if not type(useranswer) is int:   
             raise TypeError("Only integers allowed")
         else:
-            if useranswer == ANSWER:
+            if useranswer == answer:
                 print("Correct! You earned a point.")
                 sum += 1
             else:
-                print(f"Wrong answer. The correct answer is {ANSWER}.")
+                print(f"Wrong answer. The correct answer is {answer}.")
         
 
     print(f"\nGame over! Your score is: {sum}/{int(count)56}")
